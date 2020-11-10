@@ -10,7 +10,7 @@ public class ConnectionTest {
     public Connection connect(){
         Connection conn = null;
         try {
-            Class.forName("com.mysql.jdbc.Driver");
+            //Class.forName("com.mysql.jdbc.Driver");
             System.out.println("hehe");
             conn = DriverManager.getConnection(url ,"root", "gfh349.klm");
         }
