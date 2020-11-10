@@ -25,9 +25,8 @@ public class DemoServlet extends HttpServlet {
     @Override
     public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         ConnectionTest cTest = new ConnectionTest();
-        //cTest.select(1);
         resp.setContentType("text/plain");
-        resp.getWriter().println("{ \"name\": \"World  " + cTest.select(1)+ "\" }");
+        resp.getWriter().println("{ \"name\": \"Glucose =  " + cTest.select(1)+ "\" }");
 
   }
 }
