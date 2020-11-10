@@ -5,12 +5,13 @@ import java.sql.*;
 public class ConnectionTest {
     String url;
     public ConnectionTest(){
-        url = "jdbc:mysql://104.199.20.88:3306/GlucoseTest";
+        url = "jdbc:google:mysql://104.199.20.88:3306/GlucoseTest";
     }
     public Connection connect(){
         Connection conn = null;
         try {
             //Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.jdbc.GoogleDriver");
             System.out.println("hehe");
             conn = DriverManager.getConnection(url ,"root", "gfh349.klm");
         }
