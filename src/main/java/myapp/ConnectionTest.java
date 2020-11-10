@@ -48,9 +48,9 @@ public class ConnectionTest {
         }
     }
 
-    public double select(int minute){
+    public String select(int minute){
         String sql = "Select glucose from GlucPerMinute where minute = ?";
-        double ans = 0;
+        String ans = "";
 
         try (Connection conn = this.connect();
              PreparedStatement stmt = conn.prepareStatement(sql))
@@ -60,11 +60,12 @@ public class ConnectionTest {
             ResultSet rs = stmt.executeQuery();
             System.out.println("selecting");
             while (rs.next()) {
-                ans = rs.getDouble("glucose");
+                ans += rs.getDouble("glucose");
                 System.out.println("Successfully selected");
             }
         }
         catch(Exception e){
+            ans += e.getMessage();
             System.err.println(e.getMessage());
         }
         return ans;

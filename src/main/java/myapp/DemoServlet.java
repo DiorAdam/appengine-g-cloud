@@ -27,7 +27,7 @@ public class DemoServlet extends HttpServlet {
         ConnectionTest cTest = new ConnectionTest();
         //cTest.select(1);
         resp.setContentType("text/plain");
-        resp.getWriter().println("{ \"name\": \"World" + cTest.select(1)+ "\" }");
+        resp.getWriter().println("{ \"name\": \"World  " + cTest.select(1)+ "\" }");
 
   }
 }
