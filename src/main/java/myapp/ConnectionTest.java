@@ -5,7 +5,8 @@ import java.sql.*;
 public class ConnectionTest {
     String url;
     public ConnectionTest(){
-        url = "jdbc:google:mysql://104.199.20.88:3306/GlucoseTest";
+        //url = "jdbc:google:mysql://104.199.20.88:3306/GlucoseTest";
+        url = "jdbc:google:mysql://capable-shard-294808:europe-west1:test/GlucoseTest";
     }
     public Connection connect(){
         Connection conn = null;
